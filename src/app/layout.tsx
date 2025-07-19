@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/providers/convexClientProvider";
 import Footer from "@/components/Footer";
 import { Flip, ToastContainer } from "react-toastify";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
             transition={Flip}
           />
           <Footer />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
